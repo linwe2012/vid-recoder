@@ -1,13 +1,15 @@
 {
   "name": "vid-recoder",
   "version": "0.0.0",
+  "main" : "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "app": "ng build --prod && electron ."
   },
   "private": true,
   "dependencies": {
@@ -21,7 +23,9 @@
     "@angular/router": "~8.2.4",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "fluent-ffmpeg": "2.1.2",
+    "custom-electron-titlebar": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.2",
@@ -42,6 +46,11 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "electron": "^6.0.7"
+  },
+  "optionalDependencies": {
+    "@ffmpeg-installer/ffmpeg": "latest",
+    "@ffprobe-installer/ffprobe": "latest"
   }
 }
